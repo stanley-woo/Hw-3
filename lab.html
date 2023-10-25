@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Software Engineer Portfolio" />
+    <meta name="keywords" content="Stanley Woo, Portfolio, Software, Engineer, Developer, stanford stanley,
+    Stanfordly stanley" />
+    <meta name="author" content="Stanley Woo" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is the Lab Extension Section Page! Welcome!</h1>
+    <hr/>
+    <main>
+        <p>
+            <b>Here</b>, I will demonstrate some of the html tags that I have tried out!
+        </p>
+
+        <hr/>
+        <p>I just bombed my CSE 107 midterm, very <em>upset</em> now<span>&#128532;</span> </p>
+
+        <pre>
+            Let's just listen to
+            my favorite 
+            song for now to destreess a bit
+        </pre>
+        <fieldset>
+            <article class="audioWidget">
+                <figure>
+                    <figcaption><strong>Rex Orange County</strong> Keep It Up</figcaption>
+                    <audio src="Rex Orange County KEEP IT UP (Official Video).mp3" controls loop></audio>
+                    <details>
+                        <summary>He is innocent!</summary>
+                        On 22 December 2022, O'Connor released a statement saying all charges against him were dropped and the case
+                        was to be
+                        dismissed following an investigation by the Crown Prosecution Service.
+                    </details>
+                </figure>
+            </article>
+        </fieldset>
+
+
+        <fieldset>
+                    <article id="videoWidget">
+                        <h2>Just a randome video of me singing during The 1975 concert</h2>
+                        <video src="IMG_2378.mp4" width="640" height="360" controls>
+                            <strong>HTML5 video element is not supported</strong>
+                        </video>
+                    </article>
+        </fieldset>
+        
+            
+        <fieldset>
+            <legend>SVG widget</legend>
+            <svg width="400" height="180">
+                <rect x="50" y="20" ry="20" width="150" height="150" />
+                <!-- style="fill:turquoise; stroke:black; stroke-width:5; opacity: 0.5;" -->
+            </svg>
+        </fieldset>
+        
+
+        <br/>
+        <br/>
+        <table>
+            <caption>Favorite Fast Food Chains by States</caption>
+            <colgroup>
+                <col>
+                <col span="3">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">States</th>
+                    <th colspan="3" scope="colgroup">Fast Food Chains</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th scope="col">Jollibee</th>
+                    <th scope="col">Burger King</th>
+                    <th scope="col">Carl's Jr</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">CA</th>
+                    <td>100%</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                </tr>
+                <tr>
+                    <th scope="row">Washington</th>
+                    <td>100%</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button>Just a button</button>
+        <article id="templateWidget">
+            <h2>There is an <i>invisible template</i> below!</h2>
+            <template>
+                <p>Here we are in the shadow DOM!</p>
+            </template>
+        </article>
+
+        <form>
+            <fieldset>
+                <legend>Your Information</legend>
+                <label for="firstName">FIrst name:</label>
+                <input type="text" name="firstName" id="firstName" required />
+                <label for="familyName">Family Name:</label>
+                <input type="text" name="familyName" id="familyName" required />
+                <br />
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required />
+                <br />
+
+                <label for="funny-select">Your Favorite Singer:</label>
+                <select name="singers" id="funny-select">
+                    <optgroup label="post-rock">
+                        <option value="caspian">Caspian</option>
+                        <option value="mono">Mono</option>
+                        <option value="floating-in-space">Floating in Space</option>
+                        <option value="god-is-an-astronaut">GOd is An Astronaut</option>
+                        <option value="this-will-destroy-you">This Will Destroy You</option>
+                        <option value="immanuel">Immanu El</option>
+                    </optgroup>
+
+                    <optgroup label="alt-rock">
+                        <option value="the-1975">The 1975</option>
+                        <option value="beach-bunny">Bunch Bunny</option>
+                        <option value="rex-orange-county">Rex Orange County</option>
+                    </optgroup>
+                </select>
+                <br/>
+
+                <label for="icecreamFlavor">Favorite Icecream Flavor</label>
+                <input list="icecream-flavors" name="icecreamFlavor" id="icecreamFlavor" />
+                <datalist id="icecream-flavors">
+                    <option value="Vanilla"></option>
+                    <option value="Chocolate Chip"></option>
+                    <option value="Mango"></option>
+                    <option value="Strawberry"></option>
+                </datalist>
+                <br />
+            </fieldset>
+        </form>
+
+        <br />
+        
+        <fieldset>
+            <legend>MathML extra credit widget</legend>
+            <math xmlns="http://www.w3.org/1998/Math">
+                <mrow>
+                    <mn>e</mn>
+                </mrow>
+
+                <mrow>
+                    <mn>=</mn>
+                </mrow>
+
+                <mrow>
+                    <mn>m</mn>
+                    <mo>&InvisibleTimes;</mo>
+                    <msup>
+                        <mi>c</mi>
+                        <mn>2</mn>
+                    </msup>
+                </mrow>
+            </math>
+        </fieldset>
+
+        <article id="canvasWidget">
+            <h2>Canvas example</h2>
+            <canvas id="myCanvas" height="350" width="350"></canvas>
+            <script>
+                let canvas = document.getElementById('myCanvas');
+                let context = canvas.getContext('2d');
+
+                /* draw circle */
+                context.beginPath();
+                context.fillStyle = 'burgulate';
+                context.arc(150, 150, 100, 0, Math.PI * 2, true);
+                context.fill();
+            </script>
+        </article>
+
+        <br/>
+        <br/>
+        <br />
+        <br />
+
+        <div class="cols-wrap">
+            <textarea rows="5"
+                cols="30">This is inside the textarea! Below is the kind of personal website I wanna make!</textarea>
+            <code>But I know this is gonna take a lot a lot of effort!</code>
+            <aside>
+                <iframe id="inlineFrame" title="Spotify" width="632" height="500" src="https://swkang73.github.io/#about" />
+            </aside>
+        </div>
+    </main>
+
+</body>
+</html>
