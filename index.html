@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
     <meta charset="utf-8"/>
     <meta name="description" content="Software Engineer Portfolio" />
@@ -9,143 +8,171 @@
     <meta name="author" content="Stanley Woo" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="favicon_io/favicon.ico" rel="icon"/>
+    <link rel="stylesheet" href="style.css"/>
     <title>Stanley Woo's Stanfordly Website</title>
-    <style>
-        .nav-block {
-            display: inline-block
-        }
-
-        aside {
-            float: right;
-        }
-
-        /* aside {
-            width: 40%;
-            padding-left: 0.5rem;
-            margin-left: 0.5rem;
-            float: right;
-            box-shadow: inset 5px 0 5px -5px #29627e;
-            font-style: italic;
-            color: #29627e;
-        } */
-
-    </style>
 </head>
-
 <body>
-    <header>
+    <header id="home">
         <nav id="nav-menu">
-            <ol>
+            <ol class = "nav-list">
                 <li class="nav-block">
-                    <a href="#">Home </a>
+                    <a href="#home">Home </a>
                 </li>
         
                 <li class="nav-block">
-                    <a href="#">Experiences </a>
+                    <a href="#aboutMe">About Me </a>
                 </li>
         
                 <li class="nav-block">
-                    <a href="#">Projects </a>
+                    <a href="#education">Education </a>
                 </li>
         
                 <li class="nav-block">
-                    <a href="#">Education </a>
+                    <a href="#experiences">Experiences </a>
                 </li>
         
                 <li class="nav-block">
-                    <a href="lab.html">Lab 2 Section Page! </a>
+                    <a href="#contactMe">Contact Me </a>
                 </li>
             </ol>
         </nav>
+    </header>
+    
+    <hr/>
 
-        <picture>
+    <div class="name-banner">
+        <h1>
+            Stanley Woo
+        </h1>
+        <h3>
+            <span>Computer Science Student</span>
+            |
+            <span>Software Engineer</span>
+            |
+            <span>Founder</span>
+        </h3>
+    </div>
+
+    <main>
+        <hr/>
+       <picture id="profile-pic">
             <source srcset="Stanley.webp" type="image/webp"/>
             <img src="Stanley.png" alt="profile-pic" width="150" height="200">
         </picture>
-    </header>
-    
-
-    <h1>
-        Welcome to Stanfordly Stanley's personal website!
-    </h1>
-
-    <main>
-        This is just the beginning of the journeys website!
         <section id="aboutMe">
-            <h2>About me:</h2>
-            <p>Hi! Welcome to my website! I am Stanley Alexander Tsz Long Woo.</p>
-
-            <aside>
+            <h2 id="about-intro">About me:</h2>
+            <!-- <aside>
                 <p>
                     Look at the sky, I am still alive.
                 </p>
-            </aside>
+            </aside> -->
+            <section id="intro-skills-split-screen">
+                <div class="left">
+                    <p id="intro-p">
+                        I am Stanley Alexander Tsz Long Woo.
+                        <!-- <br/> -->
+                        I am a 4th year Compute Science major from Stanford University.
+                        <!-- <br/> -->
+                        I have been working in the Stanford AI lab, and been interning for companies
+                        like Meta and Snowflake.
+                        <!-- <br/> -->
+                        I am very interested in cryptography and am interested in doing research on it in graudate
+                        school!
+                        <!-- <br/> -->
+                        My favorite song right now is <em>Keep It Up</em> by <I>Rex Orange County</I>!
+                    </p>
+                    <ul id="bio-info">
+                        <li>
+                            <strong>Fullname:</strong>
+                            <span>Stanley Tsz Long Woo</span>
+                        </li>
+            
+                        <li>
+                            <strong>Email:</strong>
+                            <span>stanleywoo450401@gmail.com</span>
+                        </li>
+            
+                        <li>
+                            <strong>Age:</strong>
+                            <span>25</span>
+                        </li>
+                    </ul>
+                </div>
 
-            <p>
-                I am a 4th year Compute Science major from UCSD. I 
-                have been working in the Stanford AI lab, and been interning for companies
-                like Meta and Snowflake.
-                <br/>
-                I am very interested in cryptography and am interested in doing research on it in graudate
-                school! 
-                <br/>
-                My favorite song right now is <em>Keep It Up</em> by <I>Rex Orange County</I>!
-            </p>
-
+                <div class="right">
+                    <h3>Skills:</h3>
+                    <p>I am am indepandent teamworker, familiar with both coding and also doing research.
+                        My areas of expertise are computer science, software engineering, embedded systems,
+                        and cryptography. Below are some of my techinical skills:
+                    </p>
+                    <ul class="skill-bars">
+                        <li><strong>C++</strong></li>
+                
+                        <li><strong>PyTorch</strong></li>
+                
+                        <li><strong>Java</strong></li>
+                
+                        <li><strong>JS, HTML, CSS</strong></li>
+                
+                    </ul>
+                </div>
+            </section>
         </section>
+
+        <hr />
 
         <section id="education">
             <h2>Education:</h2>
-                
-            <p>
-                University of California, San Diego (2020-2024)
-            </p>
+        <div id="education-wrap">
+                <img class="ucsd-icon" src="UCSD_Seal.png" width="100">
+                <div id="school-info">
+                    <p><strong>Harvard University</strong></p>
+                    <p>Bachelors of Science in Computer Science</p>
+                    <p><em>GPA: 3.85</em></p>
+                    <span>(Spet 2020 - March 2024)</span>
+                </div>
+            </div>
         </section>
+
+        <hr />
 
         <section id="experiences">
             <h2>Experiences:</h2>
-            <div class="intenships-hisotry-box">
-                <div class="intenship">
-                    <p>Meta Backend Engineer Intern (June 2022 - September 2022)</p>
-                    <ul>
-                        <li>
-                            MangoDB
-                        </li>
-                    
-                        <li>
-                            Java
-                        </li>
-                    
-                        <li>
-                            React
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="intenship">
-                    <p>Snowflake Backend Engineer Intern (June 2023 - September 2023)</p>
-                    <ul>
-                        <li>
-                            Python
-                        </li>
-                
-                        <li>
-                            C++
-                        </li>
-                
-                        <li>
-                            SQL
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
+            <details id="internships-wrap">
+                <summary>Meta Backend Engineer Intern (June 2022 - September 2022)</summary>
+                <p>techinical skills that I used:</p>
+                <ul class="exp-ul">
+                    <li>Java</li>
+                    <li>React</li>
+                    <li>SQl</li>
+                </ul>
+            </details>
+            <br />
+            <details id="internships-wrap">
+                <summary>Snowflake Backend Engineer Intern (June 2023 - September 2023)</summary>
+                <p>techinical skills that I used:</p>
+                <ul class="exp-ul">
+                    <li>Python</li>
+                    <li>SQL</li>
+                    <li>PyTorch</li>
+                </ul>
+            </details>
         </section>
 
-        <section id="contactMe">
-            <h4>Contact</h4>
-            <p>I'd love to be in contact with you!</p>
+        <br/>
+        <hr />
 
+        <section id="contactMe">
+            <h4 id="contact-h4">Contact</h4>
+            <p>I'd love to be in contact with you!</p>
+            <p>Let me get to know more of you.</p>
+            <section id="email">
+                <i class="icon-mail">
+                    <img src="mail-icon.svg" alt="email icon" width="60" height="60">
+                </i>
+                <h5>Email me at</h5>
+                <p>stanleywoo450401@gmail.com</p>
+            </section>
         </section>
 
     </main>
