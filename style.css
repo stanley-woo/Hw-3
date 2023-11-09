@@ -1,17 +1,27 @@
 :root {
-    --main-main-background: #f5eded;
+    /* --main-main-background: #f5eded;
     --primary-background: #3edea3;
     --primary-background-main: #bffeff;
     --aside-background: #3edea3;
-    --primary_text-color: #1a1a1a;
+    --primary_text-color: #1a1a1a; */
+    --main-background-color: #d9d9d9;
 }
 
 html{
     font-family: Georgia, serif;
+    color : #353535;
 }
 
 body {
-    background: var(--main-main-background);
+    background: var(--main-background-color);
+}
+
+.box {
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
 }
 
 /*  1. Nav bar + Name banner Section
@@ -48,7 +58,7 @@ body {
     position: fixed;
     left: 0;
     top: 0;
-    background: #3edea3;
+    background: #3c6e71;
     height: 30px;
 }
 
@@ -114,11 +124,20 @@ ol#nav_list li {
     display: inline-block;
 }
 
-main #profile-pic {
+.profile-pic {
     height: auto;
     width: auto;
     display: flex;
     justify-content: center;
+    /* background-color: red; */
+}
+
+.profile-pic img {
+    border-radius: 50%;
+}
+
+.profile-pic:hover {
+    opacity: 0.5;
 }
 
 /* screen optimization for phones */
