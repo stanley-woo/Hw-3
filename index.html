@@ -8,8 +8,26 @@
     <meta name="author" content="Stanley Woo" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="favicon_io/favicon.ico" rel="icon"/>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style2.css"/>
     <title>Stanley Woo's Stanfordly Website</title>
+    <style>
+        body {
+            transition: background-color 0.5s ease;
+        }
+        .dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .toggle-button {
+            padding: 10px;
+            background-color: #ccc;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+    </style>
 </head>
 <body>
     <header id="home">
@@ -28,7 +46,11 @@
                 </li>
         
                 <li class="nav-block">
-                    <a href="#experiences">Experiences </a>
+                    <a href="#resume">Resume </a>
+                </li>
+
+                <li class="nav-block">
+                    <a href="#projects">Projects </a>
                 </li>
         
                 <li class="nav-block">
@@ -39,6 +61,7 @@
     </header>
     
     <hr/>
+    <button class="toggle-button" id="darkModeToggle">Toggle Dark Mode</button>
 
     <div class="name-banner">
         <h1>
@@ -126,41 +149,71 @@
         <div id="education-wrap">
                 <img class="ucsd-icon" src="UCSD_Seal.png" width="100">
                 <div id="school-info">
-                    <p><strong>Harvard University</strong></p>
+                    <p><strong>University of California, San Diego</strong></p>
                     <p>Bachelors of Science in Computer Science</p>
                     <p><em>GPA: 3.85</em></p>
                     <span>(Sep 2020 - Mar 2024)</span>
                 </div>
             </div>
         </section>
-
-        <hr />
-
-        <section id="experiences">
-            <h2>Experiences:</h2>
-            <details id="internships-wrap">
-                <summary>Meta Backend Engineer Intern (June 2022 - September 2022)</summary>
-                <p>techinical skills that I used:</p>
-                <ul class="exp-ul">
-                    <li>Java</li>
-                    <li>React</li>
-                    <li>SQl</li>
-                </ul>
-            </details>
-            <br />
-            <details id="internships-wrap">
-                <summary>Snowflake Backend Engineer Intern (June 2023 - September 2023)</summary>
-                <p>techinical skills that I used:</p>
-                <ul class="exp-ul">
-                    <li>Python</li>
-                    <li>SQL</li>
-                    <li>PyTorch</li>
-                </ul>
-            </details>
+        <hr/>
+        <section id="resume">
+            <div class="resume-cards">
+                <div class="resume-card">
+                    <h3>Snowflake Software Engineering Intern</h3>
+                    <p class="sub-info">June 2023 - Sep 2023</p>
+                    <p>Worked on the SQL-feature team. Implemented the Sansshell Project - A gRPC model to replace SSH access to
+                        Cloud instances</p>
+                </div>
+            
+                <div class="resume-card">
+                    <h3>Meta Software Engineering Intern</h3>
+                    <p class="sub-info">June 2022 - Sep 2022</p>
+                    <p>Worked on the SQL-feature team. Implemented the Sansshell Project - A gRPC model to replace SSH access to
+                        Cloud instances</p>
+                </div>
+            </div>
         </section>
 
         <br/>
         <hr />
+
+        <section id="projects">
+            <div class="carousel-container">
+                <div class="project-card">
+                    <h2>Nachos Operating System</h2>
+                    <p>Implemented Operating System concepts in the Nachos operating system. Nachos is a Java application written to perform
+                    the functions of a real OS, but with missing implementations that would be filled in by us, the students.</p>
+                    <p><strong>Technologies Used:</strong> Java, C</p>
+                    <div class="project-footer">
+                        <a href="project1.html" class="cta-button">
+                            <img src="os.png" alt="Project Logo" width="20">
+                            View Project
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="carousel-container">
+                    <div class="project-card">
+                        <h2>IOT Project</h2>
+                        <p>Deployed C++ code on ~25 IoT devices (ESP32 Arduino Boards) for data collection in RIMAC (UCSD's Fitness Center) during
+                        May 2023. Each board records all nearby bluetooth beaconing devices and their signal strength, then logs that data to
+                        our backend API through HTTP.</p>
+                        <p><strong>Technologies Used:</strong> C++, Arduino</p>
+                        <div class="project-footer">
+                            <a href="project1.html" class="cta-button">
+                                <img src="os.png" alt="Project Logo" width="20">
+                                View Project
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+        
+            </div>
+        </section>
+        <hr />
+        <br />
 
         <section id="contactMe">
             <h4 id="contact-h4">Contact</h4>
@@ -173,6 +226,32 @@
                 <h5>Email me at</h5>
                 <p>stanleywoo450401@gmail.com</p>
             </section>
+
+            <h4>Here is a contact form for you as well: </h4>
+
+            <div class="form-container">
+                <form id="myForm" action="https://httpbin.org" method="get" novalidate>
+                    <input type="hidden" name="possible-bot" id="possible-bot" value="true">
+                    <label for="fname">Name: <span>*</span></label>
+                    <input type="text" id="form-fname" name="fullname" placeholder="Your name.." required required 
+                     title="Only letters and spaces are allowed" pattern="[A-Za-z ]+"/>
+                    <output for="fname" id="fname-error" class="error-container"></output>
+                    <label for="email">Email: <span>*</span></label>
+                    <input type="email" id="form-email" name="email" placeholder="Your Email Address.." required 
+                    pattern="/\S+@\S+\.\S+/"/>
+                    <output for="email" id="email-error" class="error-container"></output>
+                    <br/>
+                    <label for="comments">Your Message: <span>*</span></label>
+                    <textarea id="form-comments" name="comments" placeholder="Your Message..." required maxlength="100"
+                        title="Only letters, numbers, and basic punctuation are allowed""
+                        pattern="^[a-zA-Z0-9]"></textarea>
+                    <output for="comments" id="comment-error" class="error-container"></output>
+                    <div class="char-countdown" id="charCountdown">100 characters remaining</div>
+                    <input type="submit" value="Submit">
+
+                </form>
+
+            </div>
         </section>
 
 
@@ -181,6 +260,7 @@
     <footer>
         <p>&copy; Stanley Woo</p>
     </footer>
+<script src="script.js"></script>
 </body>
 
 </html>
